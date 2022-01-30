@@ -1,3 +1,10 @@
+import { MetaFunction } from "remix"
+import { getWebsiteTitle } from "~/utils"
+
+export const meta: MetaFunction = () => {
+  return { title: getWebsiteTitle("Redakce") }
+}
+
 export default function EditorialBoardIndex() {
   return (
     <main>

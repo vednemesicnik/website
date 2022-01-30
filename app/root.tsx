@@ -1,15 +1,22 @@
+// noinspection HtmlRequiredTitleElement
+
 import { Links, LiveReload, Meta, Outlet, Scripts, ScrollRestoration } from "remix"
 import type { MetaFunction } from "remix"
+import { getWebsiteTitle } from "./utils"
+import styles from "~/styles/global.css"
 
 export const meta: MetaFunction = () => {
-  return { title: "New Remix App" }
+  return { title: getWebsiteTitle() }
+}
+
+export function links() {
+  return [{ rel: "stylesheet", href: styles }]
 }
 
 export default function App() {
   return (
     <html lang="en">
       <head>
-        <title>VDM</title>
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width,initial-scale=1" />
         <Meta />
