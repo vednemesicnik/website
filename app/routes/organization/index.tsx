@@ -1,13 +1,17 @@
-import { MetaFunction } from "remix"
+import { MetaFunction, LinksFunction } from "remix"
 import { getWebsiteTitle } from "~/utils"
 
 export const meta: MetaFunction = () => {
   return { title: getWebsiteTitle("Spolek") }
 }
 
+export const links: LinksFunction = () => {
+  return []
+}
+
 export default function OrganizationIndex() {
   return (
-    <main>
+    <>
       <h1>Vedneměsíčník, z. s.</h1>
       <p>
         Spolek Vedneměsíčník, který vznikl v říjnu roku 2010, své cíle realizuje především publikováním časopisu
@@ -27,6 +31,6 @@ export default function OrganizationIndex() {
           <a href="https://fokus-cb.cz">Fokus České Budějovice</a>
         </li>
       </ul>
-    </main>
+    </>
   )
 }

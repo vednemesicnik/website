@@ -1,23 +1,21 @@
-import { Link } from "remix"
+import { LinksFunction } from "remix"
 
-export default function Index() {
+export const links: LinksFunction = () => {
+  return []
+}
+
+/**
+ * Route Component
+ */
+
+export default function IndexRoute() {
   return (
-    <div style={{ fontFamily: "system-ui, sans-serif", lineHeight: "1.4" }}>
-      <h1>VDM website</h1>
-      <ul>
-        <li>
-          <Link to={"/organization"}>Spolek</Link>
-        </li>
-        <li>
-          <Link to={"/editorial-board"}>Redakce</Link>
-        </li>
-        <li>
-          <Link to={"/posts"}>Články</Link>
-        </li>
-        <li>
-          <Link to={"/archive"}>Archiv</Link>
-        </li>
-      </ul>
-    </div>
+    <>
+      <h1>Vedneměsíčník</h1>
+
+      <p>
+        Všechny naše články najdete na <a href="https://medium.com/vednemesicnik">Medium</a>.
+      </p>
+    </>
   )
 }
