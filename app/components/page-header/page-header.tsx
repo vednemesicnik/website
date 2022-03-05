@@ -1,12 +1,11 @@
 import { ReactNode } from "react"
 import styles from "./styles.css"
+import { createStylesLink } from "~/utils"
 
-export function pageHeaderLinks() {
-  return [{ rel: "stylesheet", href: styles }]
-}
+export const pageHeaderStylesLink = createStylesLink(styles)
 
 type Props = {
-  children: ReactNode
+  children?: ReactNode
 }
 
 export const PageHeader = ({ children }: Props) => {

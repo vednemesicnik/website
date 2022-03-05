@@ -1,11 +1,8 @@
-type StyleLink = {
-  rel: "stylesheet"
-  href: string
-}
+import { LinkDescriptor } from "remix"
 
-export function createStylesLink(styles: string): StyleLink {
+export function createStylesLink(stylesUrl: string): LinkDescriptor {
   return {
     rel: "stylesheet",
-    href: styles,
+    href: stylesUrl,
   }
 }

@@ -1,0 +1,109 @@
+/**
+ * site-footer
+ */
+
+[data-name="site-footer"] {
+  display: grid;
+  position: relative;
+  width: 100%;
+  min-width: var(--page-min-width);
+  grid-template-columns: minmax(var(--page-min-width), var(--page-max-width));
+  justify-content: center;
+  align-content: start;
+  grid-area: site-footer;
+  background-color: #000000;
+}
+
+/**
+ * site-footer--content
+ */
+
+[data-name="site-footer--content"] {
+  display: grid;
+  position: relative;
+  grid-template-columns: 1fr max-content;
+  grid-template-rows: max-content max-content;
+  grid-template-areas:
+    "links social-sites"
+    "info info";
+  grid-row-gap: 20px;
+  width: 100%;
+  padding: 40px;
+  box-sizing: border-box;
+}
+
+@media all and (max-width: 689px) {
+  [data-name="site-footer--content"] {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, max-content);
+    grid-template-areas:
+      "social-sites"
+      "links"
+      "info";
+    justify-items: center;
+  }
+}
+
+/**
+ * site-footer--links
+ */
+
+[data-name="site-footer--links"] {
+  display: grid;
+  position: relative;
+  grid-auto-flow: row;
+  grid-row-gap: 8px;
+  width: 100%;
+  grid-area: links;
+}
+
+[data-name="site-footer--links"] a {
+  color: white;
+}
+
+@media all and (max-width: 689px) {
+  [data-name="site-footer--links"] {
+    justify-items: center;
+  }
+}
+
+/**
+ * site-footer--social-sites
+ */
+
+[data-name="site-footer--social-sites"] {
+  display: grid;
+  position: relative;
+  grid-auto-flow: column;
+  grid-area: social-sites;
+
+  color: white;
+}
+
+[data-name="site-footer--social-site-icon"] {
+  fill: #ffffff;
+}
+
+[data-name="site-footer--social-site-link"] {
+  display: flex;
+  position: relative;
+  width: 60px;
+  height: 60px;
+  border-radius: 30px;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+/**
+ * site-footer--info
+ */
+
+[data-name="site-footer--info"] {
+  display: grid;
+  position: relative;
+  grid-area: info;
+
+  color: white;
+
+  font-size: 12px;
+}

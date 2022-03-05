@@ -1,0 +1,28 @@
+/**
+ * site-content
+ */
+
+[data-name="site-content"] {
+  display: grid;
+  position: relative;
+  width: 100%;
+  min-width: var(--page-min-width);
+  grid-template-columns: minmax(var(--page-min-width), var(--page-max-width));
+  justify-content: center;
+  align-content: start;
+  grid-area: site-content;
+  padding-top: var(--site-nav-height);
+}
+
+/**
+ * site-content--page
+ */
+
+[data-name="site-content--page"] {
+  display: grid;
+  position: relative;
+  grid-auto-flow: row;
+  width: 100%;
+  padding: 40px;
+  box-sizing: border-box;
+}
